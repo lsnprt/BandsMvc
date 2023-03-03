@@ -13,8 +13,9 @@
     <ul>
         @foreach (var band in Model)
             {
+                string link = $"/details/{band.Id}";
                 <li>
-                    @band.Name - @band.Description
+                    <a href=@link>@band.Name - @band.Description</a>
                 </li>
             }
     </ul>
